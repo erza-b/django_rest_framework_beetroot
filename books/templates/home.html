@@ -1,0 +1,29 @@
+<!-- Lista e librave në formë të tabeles -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista e librave</title>
+</head>
+<body>
+    <h1>Lista e librave</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Titulli</th>
+                <th>Autori</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in all_books_list %}
+                <tr>
+                    <td><a href="#">{{ book.title }}</a></td>
+                    <td>{{ book.author }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
